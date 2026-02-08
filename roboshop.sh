@@ -10,7 +10,7 @@ INSTANCE_ID=$(aws ec2 run-instances \
                --image-id "$AMI_ID" \
                --instance-type t3.micro \
                --security-group-ids "$SG_ID" \
-               --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$INSTANCE}]"
+               --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$instance}]"
                --query 'Instances[0].InstanceId' \  # For each instance, we will get seperate uniqe ID
                --output text)
 done      
@@ -33,5 +33,7 @@ if [ $instance == frontend]; then
             )
       fi      
 
+      echo $AMI_ID
+      echo $SG_ID
       echo "Instance IP: $IP"
 done
