@@ -1,5 +1,8 @@
 #!/bin/bash
 
+AWS="/usr/local/bin/aws"
+
+
 set -e
 
 SG_ID="sg-019f25a2463a096b9"
