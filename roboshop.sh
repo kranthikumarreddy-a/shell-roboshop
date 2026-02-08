@@ -1,10 +1,6 @@
 #!/bin/bash
 
 AWS="/usr/local/bin/aws"  # AWS cofigured in /usr/local/bin/aws location
-
-
-set -e
-
 SG_ID="sg-019f25a2463a096b9"
 AMI_ID="ami-0220d79f3f480ecf5"
 HOST_ID="Z09442902NGE25Y6RCGF6"
