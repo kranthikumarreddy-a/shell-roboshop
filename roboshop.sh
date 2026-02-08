@@ -37,5 +37,5 @@ do
       --output text)
   fi
 
-  echo "Instance ($instance) IP: $IP"
+  echo "Instance ($instance) IP:: $IP"
 done
