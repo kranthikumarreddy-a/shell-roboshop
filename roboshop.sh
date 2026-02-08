@@ -13,9 +13,7 @@ INSTANCE_ID=$(aws ec2 run-instances \
                --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$INSTANCE}]"
                --query 'Instances[0].InstanceId' \  # For each instance, we will get seperate uniqe ID
                --output text)
-done
-
-         
+done      
 if [ $instance == frontend]; then
 
         IP=$(
